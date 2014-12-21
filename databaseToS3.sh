@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # WordPress to S3 Bash Script
-# https://github.com/niczak/
+# https://github.com/niczak/WP-S3
 #
 # Configuration: Update the variables below with your credentials.
 #
 # Usage: Run directly from command line or as a cron job.
 #
-# sh ./wpS3Cron.sh
+# sh ./databaseToS3.sh
 #
 #
 
