@@ -19,7 +19,7 @@ stamp=`date +"%m-%d-%y"`
 tempfile='/tmp/wp-backup.gz'
 
 s3bucket="s3://BUCKETNAME"
-s3file="$s3bucket/wp-backup-$stamp.gz"
+s3file="$s3bucket/wp-db-backup-$stamp.gz"
 
 echo "\n... Dumping data"
 
