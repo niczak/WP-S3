@@ -7,23 +7,21 @@
 #
 # Usage: Run directly from command line or as a cron job.
 #
-# sh ./databaseToS3.sh
+# sh ./filesToS3.sh
 #
 #
 
-mysqluser="MYSQL_USER"
-mysqlpass="MYSQL_PASS"
-mysqldb="MYSQL_DB"
+path="PATH_TO_FILES"
 
 stamp=`date +"%m-%d-%y"`
-tempfile='/tmp/wp-db-backup.gz'
+tempfile='/tmp/wp-file-backup.gz'
 
 s3bucket="s3://BUCKETNAME"
-s3file="$s3bucket/wp-db-backup-$stamp.gz"
+s3file="$s3bucket/wp-file-backup-$stamp.gz"
 
-echo "\n... Dumping data"
+echo "\n... Compressing data"
 
-mysqldump -u "$mysqluser" -p"$mysqlpass" --force --opt --databases "$mysqldb" | gzip -c > "$tempfile"
+tar -zcvf "$tempfile" "$path"
 
 echo "\n... Uploading data"
 
