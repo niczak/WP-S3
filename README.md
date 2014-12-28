@@ -5,6 +5,13 @@ WordPress to S3 Back-Up
 
 Contained here are a collection of scripts that I use heavily in conjunction with WordPress and S3 to create daily/weekly back-ups of my database/files respectively.
 
+## Requirements
+
+In order to leverage Amazon's S3 services you will need to install the s3cmd tools.  All major package managers will have this utility, I installed it in Ubuntu using the following command:
+```
+sudo apt-get install s3cmd
+```
+
 ## Installation
 ```
 git clone https://github.com/niczak/WP-S3.git
