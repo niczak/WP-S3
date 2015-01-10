@@ -7,7 +7,7 @@ Contained here are a collection of scripts that I use heavily in conjunction wit
 
 ## Requirements
 
-In order to leverage Amazon's S3 services you will need to install the s3cmd tools.  All major package managers will have this utility, I installed it in Ubuntu using the following command:
+In order to leverage Amazon's S3 services you will need to have an AWS account and the the s3cmd tools.  All major package managers will have this utility, I installed it in Ubuntu using the following command:
 ```
 sudo apt-get install s3cmd
 ```
